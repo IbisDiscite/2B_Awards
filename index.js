@@ -1,21 +1,10 @@
 console.log("Oh Yeah!")
-const express = require('express')
-const database = require('./database')
-const app = express()
 
-database.initializeMongo();
-
-app.get('/', function (req, res) {
-    res.send('Hello World!')
-})
-
-app.get('/testFind', function (req, res) {
-    database.Kitten.find(function (err, kittens) {
-        if (err) res.status(500).send({ error: err });
-        console.log(kittens);
-        res.json(kittens);
-    })
-})
+var express = require('express');
+var app = express();
+app.get('/', function(req, res){
+    res.send("Hello World");
+});
 
 app.listen(4005, function () {
     console.log('Example app listening on port 3000!')

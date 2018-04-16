@@ -1,15 +1,14 @@
 FROM node
 
-# Create app directory
-WORKDIR /usr/src/app
+RUN mkdir /app
 
-# Install app dependencies
-COPY package.json .
+WORKDIR /app
+
+COPY package.json /app
 
 RUN npm install
 
-# Bundle app source
-COPY . .
+COPY . /app
 
 EXPOSE 4005
 
