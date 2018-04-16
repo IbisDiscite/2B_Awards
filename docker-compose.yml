@@ -1,11 +1,11 @@
 version: '3'
 services:
   web:
-    image: docker-node-express-mongoapp
+    image: pcberriop/2b_awards
     build: ./web-site
     command: node index.js
     ports:
-      - "3000:3000"
+      - "4005:4005"
     volumes:
       - ./web-site:/usr/src/app
       - /usr/src/app/node_modules
@@ -15,7 +15,7 @@ services:
     image: "mongo"
 
     ports:
-      - "27017:27017"
+      - "3005:3005"
   adminmongo:
     image: "mrvautin/adminmongo"
 
