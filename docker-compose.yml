@@ -1,7 +1,7 @@
 version: '3'
 services:
   web:
-    image: docker-node-express-mongoapp
+    image: pcberriop/2b_awards
     build: ./web-site
     command: node index.js
     ports:
