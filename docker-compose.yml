@@ -2,12 +2,12 @@ version: '3'
 services:
   web:
     image: pcberriop/2b_awards
-    build: ./web-site
+    build: .
     command: node index.js
     ports:
       - "4005:4005"
     volumes:
-      - ./web-site:/usr/src/app
+      - ./:/usr/src/app
       - /usr/src/app/node_modules
     depends_on:
       - "mongo"

@@ -4,7 +4,7 @@ FROM node
 WORKDIR /usr/src/app
 
 # Install app dependencies
-COPY web-site/package.json .
+COPY package.json .
 
 RUN npm install
 
