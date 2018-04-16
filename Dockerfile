@@ -9,7 +9,7 @@ COPY web-site/package.json .
 RUN npm install
 
 # Bundle app source
-COPY .. .
+COPY . .
 
 EXPOSE 4005
 
