@@ -1,11 +1,11 @@
-console.log("Oh Yeah!")
-
 var express = require('express');
 var app = express();
-app.get('/', function(req, res){
-    res.send("Hello World");
+var mongoose = require('mongoose');
+//DB setup
+mongoose.connect("mongodb://mongo:27017");
+    app.get('/', function(req, res){
+res.send("Hello World-changed-1 ");
 });
-
-app.listen(4005, function () {
-    console.log('Example app listening on port 3000!')
-})
+app.listen(4005, function(){
+    console.log('Example app listening on port 4005!');
+});
