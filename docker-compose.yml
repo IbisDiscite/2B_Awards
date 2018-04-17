@@ -1,7 +1,7 @@
 version: "2"
 services:
   web:
-    image: pcberriop/2b_awards
+    build: .
     volumes:
       - ./:/app
     ports:
